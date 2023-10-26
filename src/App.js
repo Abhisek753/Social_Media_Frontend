@@ -3,7 +3,7 @@ import HomePage from "scenes/homePage";
 import LoginPage from "scenes/loginPage";
 import ProfilePage from "scenes/profilePage";
 import { useMemo } from "react";
-import { UseSelector, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "theme";
@@ -18,9 +18,9 @@ function App() {
         <ThemeProvider theme={theme}>
         <CssBaseline/>
           <Routes>
-            <Route path="/" elemet={<LoginPage />} />
-            <Route path="/home" elemet={<HomePage />} />
-            <Route path="/profile/:userId" elemet={<ProfilePage />} />
+            <Route path="/" element={<LoginPage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/profile/:userId" element={<ProfilePage />} />
           </Routes>
         </ThemeProvider>
       </BrowserRouter>
